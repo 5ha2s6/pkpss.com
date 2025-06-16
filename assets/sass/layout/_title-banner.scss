@@ -1,0 +1,17 @@
+.title-banner {
+    position: relative;
+    background: url('../media/background/title-banner.png') no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: clamp(298px, 25.833vw, 828px);
+
+    .tilte-text {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        text-align: center;
+        padding: 0 24px;
+    }
+}

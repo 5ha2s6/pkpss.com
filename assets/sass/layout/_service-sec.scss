@@ -1,0 +1,398 @@
+.service-sec {
+    .service-block-wrapper {
+        border-radius: $br-24;
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+
+        @include media-query(788px) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+        }
+
+        @include media-query(766px) {
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(1, 1fr);
+        }
+
+        .service-card {
+            padding: clamp(26px, 2.5vw, 54px);
+            padding-top: 0;
+            background-color: $black;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: end;
+            gap: $gap-32;
+            transition: $transition;
+            height: clamp(300px, 19.583vw, 854px);
+            position: relative;
+
+            @include media-query(766px) {
+                border: 2px solid $light-black !important;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                opacity: 0;
+                z-index: 1;
+                transition: $transition;
+            }
+
+            &:nth-child(1) {
+                border-right: 1px solid $light-black;
+
+                &::before {
+                    background-image: url('../media/services/service-img-1.jpg');
+                }
+            }
+
+            &:nth-child(2) {
+                border-right: 1px solid $light-black;
+
+                &::before {
+                    background-image: url('../media/services/service-img-2.jpg');
+                }
+            }
+
+            &:nth-child(3) {
+                &::before {
+                    background-image: url('../media/services/service-img-3.jpg');
+                }
+            }
+
+            &:nth-child(4) {
+                border: 1px solid $light-black;
+                border-left: 0px;
+
+                &::before {
+                    background-image: url('../media/services/service-img-4.jpg');
+                }
+            }
+
+            &:nth-child(5) {
+                border: 1px solid $light-black;
+                border-left: 0px;
+
+                &::before {
+                    background-image: url('../media/services/service-img-5.jpg');
+                }
+            }
+
+            &:nth-child(6) {
+                border: 1px solid $light-black;
+                border-left: 0px;
+                border-right: 0px;
+
+                &::before {
+                    background-image: url('../media/services/service-img-6.jpg');
+                }
+            }
+
+            &:nth-child(7) {
+                border-right: 1px solid $light-black;
+
+                &::before {
+                    background-image: url('../media/services/service-img-7.jpg');
+                }
+            }
+
+            &:nth-child(8) {
+                border-right: 1px solid $light-black;
+
+                &::before {
+                    background-image: url('../media/services/service-img-8.jpg');
+                }
+            }
+
+            &:nth-child(9) {
+
+                &::before {
+                    background-image: url('../media/services/service-img-9.jpg');
+                }
+            }
+
+            .svg-icon {
+                z-index: 2;
+
+                svg {
+                    width: clamp(48px, 3.75vw, 128px);
+                    height: clamp(48px, 3.75vw, 128px);
+
+                    path {
+                        transition: $transition;
+                        fill: $accent-3;
+                    }
+                }
+            }
+
+            .card-content {
+                z-index: 2;
+            }
+
+            .service-btn {
+                font-family: $font-sec;
+                font-size: clamp(13px, 0.938vw, 62px);
+                font-style: normal;
+                font-weight: 400;
+                line-height: 150%;
+                text-decoration: underline;
+                height: 0px;
+                overflow: hidden;
+                transition: $transition;
+
+                @include media-query(766px) {
+                    height: clamp(18px, 1.354vw, 48px);
+                }
+            }
+
+            p {
+                transition: $transition;
+            }
+
+            &:hover {
+                &::before {
+                    opacity: 1;
+                }
+
+                p {
+                    color: $lightest-gray !important;
+                }
+
+                svg {
+                    path {
+                        transition: $transition;
+                        fill: $white;
+                    }
+                }
+
+                .service-btn {
+                    transition: $transition;
+                    height: clamp(18px, 1.354vw, 48px);
+                }
+            }
+        }
+    }
+}
+
+.heading {
+    text-align: center;
+
+    .sec-title {
+        text-decoration: underline;
+        text-decoration-color: $accent-2;
+        text-underline-offset: 14px;
+
+        @include media-query(766px) {
+            line-height: 160%;
+        }
+    }
+}
+
+.service-detail-sec {
+
+    .skills-bar-container {
+        position: relative;
+        list-style: none;
+        padding: 0;
+        width: 90%;
+
+        @include media-query(576px) {
+            width: 99%;
+        }
+
+        &.skill-container-2 {
+            width: 100%;
+        }
+
+        .skill-parent {
+            position: relative;
+            width: 100%;
+
+            .progressbar-title {
+                display: flex;
+                align-items: center;
+                gap: $gap-12;
+
+                .line-text {
+                    text-wrap: nowrap;
+                    color: $lightest-gray !important;
+                }
+
+                .bar-container {
+                    background: $lightest-gray;
+                    position: relative;
+                    width: 75%;
+                    height: clamp(10px, 0.833vw, 24px);
+                    border-radius: clamp(18px, 1.25vw, 138px);
+                    display: flex;
+                    align-items: center;
+
+                    &.bar-2 {
+                        width: 88%;
+                    }
+
+                    #progress-repairing {
+                        width: 100%;
+                    }
+
+                    .progressbar {
+                        background-color: $accent-1;
+                        width: 0%;
+                        height: 100%;
+                        border-radius: $br-24;
+                        -webkit-animation-duration: 6s;
+                        animation-duration: 6s;
+                        -webkit-animation-timing-function: ease-out;
+                        animation-timing-function: ease-out;
+                        -webkit-animation-fill-mode: both;
+                        animation-fill-mode: both;
+
+                    }
+
+                    #progress-cleaning {
+                        -webkit-animation-name: progress-cleaning;
+                        animation-name: progress-cleaning;
+                        -webkit-animation-delay: 0.8s*3;
+                        animation-delay: 0.8s*3;
+                    }
+
+                    #progress-build {
+                        -webkit-animation-name: progress-build;
+                        animation-name: progress-build;
+                        -webkit-animation-delay: 0.3s*3;
+                        animation-delay: 0.3s*3;
+                    }
+
+                    #progress-repairing {
+                        -webkit-animation-name: progress-repairing;
+                        animation-name: progress-repairing;
+                        -webkit-animation-delay: 0.3s*3;
+                        animation-delay: 0.3s*3;
+                    }
+                }
+
+                .percent {
+                    display: grid;
+                    align-items: center;
+                    justify-content: center;
+                    color: $white;
+                    width: clamp(28px, 2.344vw, 54px);
+                    height: clamp(28px, 2.344vw, 54px);
+                    border-radius: 50%;
+                    margin-left: clamp(-22px, -1.25vw, -48px);
+                    margin-top: -40px;
+
+                    @media (min-width: 2100px) {
+                        margin-top: -56px;
+                    }
+
+                    @media (min-width: 3500px) {
+                        margin-top: -72px;
+                    }
+                }
+            }
+        }
+
+        @-webkit-keyframes progress-cleaning {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 85%;
+            }
+        }
+
+        @-webkit-keyframes progress-build {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 90%;
+            }
+        }
+
+        @-webkit-keyframes progress-repairing {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 100%;
+            }
+        }
+
+        @-moz-keyframes progress-cleaning {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 85%;
+            }
+        }
+
+        @-moz-keyframes progress-build {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 90%;
+            }
+        }
+
+        @-moz-keyframes progress-repairing {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 100%;
+            }
+        }
+
+        @keyframes progress-cleaning {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 85%;
+            }
+        }
+
+        @keyframes progress-build {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 90%;
+            }
+        }
+
+        @keyframes progress-repairing {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 100%;
+            }
+        }
+    }
+}

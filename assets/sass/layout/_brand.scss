@@ -1,0 +1,47 @@
+.brand {
+    .brand-slider-wrapper {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+
+        .brand-slider {
+            width: 74.792vw;
+            margin: 0 auto;
+            overflow: visible;
+
+            .slick-list {
+                overflow: visible;
+
+            }
+
+            .slider-item {
+                padding: 0 0.625vw;
+
+                .logo {
+                    width: 13.958vw;
+                    height: 5.208vw;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 0 5px;
+
+                    @include media-query(768px) {
+                        width: 19.01vw;
+                        height: 10.208vw;
+                    }
+
+                    @include media-query(490px) {
+                        width: 21.837vw;
+                        height: 14.286vw;
+                    }
+                }
+            }
+        }
+
+        &.slider-rightSlider {
+            .slider-item {
+                direction: ltr;
+            }
+        }
+    }
+}

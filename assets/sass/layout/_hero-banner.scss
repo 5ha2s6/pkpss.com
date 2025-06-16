@@ -1,0 +1,31 @@
+.hero-sec {
+  background: url('../media/background/hero-bg.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: clamp(550px, 51.146vw, 1954px);
+  position: relative;
+
+  .hero-content {
+    position: absolute;
+    width: 100%;
+    bottom: clamp(48px, 5vw, 128px);
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+    @include media-query(766px) {
+      padding: 0 24px;
+
+      p {
+        br {
+          display: none;
+        }
+      }
+    }
+  }
+}

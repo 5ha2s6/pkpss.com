@@ -1,0 +1,75 @@
+.faq {
+    .faq-block {
+        background-color: $black;
+        padding: clamp(12px, 0.833vw, 32px);
+        border-radius: 8px;
+
+        .accordion-button {
+            margin: 0;
+            position: relative;
+            padding: 0;
+            color: $white !important;
+            font-size: clamp(15px, 1.198vw, 40px);
+            /* 23px */
+            font-style: normal;
+            font-weight: 500;
+            line-height: 120%;
+
+            @include media-query(1199px) {
+                font-size: clamp(15px, 0.938vw, 36px);
+                /* 18px */
+            }
+
+            &.collapsed {
+                color: $white !important;
+                border-radius: 0px;
+                padding: 0;
+                background: none;
+                margin: 0;
+
+                &::after {
+                    background-image: none !important;
+                    content: "\f067";
+                    font-family: $font-awesome;
+                }
+            }
+
+            &:not(.collapsed) {
+                color: $white;
+                background: transparent;
+                border: none;
+                box-shadow: none;
+            }
+
+            &:focus {
+                border: none;
+                box-shadow: none;
+            }
+
+            &::after {
+                content: "\f068";
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                transition: $transition;
+                font-family: $font-awesome;
+                background-image: none !important;
+                position: absolute;
+                right: 0px;
+                font-weight: 400;
+                color: $white;
+                font-size: clamp(12px, 0.833vw, 32px);
+                cursor: pointer;
+                padding-left: 12px;
+            }
+        }
+
+        .accordion-collapse {
+            p {
+                color: $light-gray !important;
+                margin: 16px 0 0;
+            }
+        }
+    }
+
+}

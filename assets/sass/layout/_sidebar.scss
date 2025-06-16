@@ -1,0 +1,204 @@
+.blog-sidebar {
+    padding: clamp(16px, 1.042vw, 40px);
+    background: $light-black;
+    border-radius: $br-12;
+
+    a,
+    .blog-text {
+        &:hover {
+            color: $accent-1 !important;
+        }
+    }
+
+    form {
+        position: relative;
+
+        input {
+            border: 1px solid $light-gray !important;
+        }
+
+        button {
+            position: absolute;
+            right: 14px;
+            top: 14px;
+            border: 0;
+            background: transparent;
+
+            svg {
+                width: clamp(16px, 1.25vw, 48px);
+                height: clamp(16px, 1.25vw, 48px);
+            }
+        }
+    }
+
+    .blog-catg-block {
+        .blog-sidebar-block {
+            display: flex;
+            align-items: center;
+            gap: clamp(8px, 0.83vw, 24px);
+
+            .img-box {
+                display: flex;
+                flex-shrink: 0;
+                overflow: hidden;
+                border-radius: $br-4;
+                width: clamp(96px, 7.292vw, 220px);
+
+                img {
+                    width: 100%;
+                    border-radius: $br-4;
+                    -webkit-transition: all 0.35s linear 0s;
+                    transition: all 0.35s linear 0s;
+                }
+            }
+
+            .info {
+                .blog-text {
+                    color: $white;
+                    transition: $transition;
+                    overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                }
+            }
+
+            &:hover {
+                .img-box {
+                    img {
+                        -webkit-transform: scale(1.1);
+                        transform: scale(1.1);
+                        -webkit-transition: all 0.35s linear 0s;
+                        transition: all 0.35s linear 0s;
+                    }
+                }
+
+                .info {
+                    .blog-text {
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.shop-sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 999;
+    cursor: url(../media/close.png), auto;
+
+    &.active {
+        display: block;
+        opacity: 1;
+    }
+}
+
+.shop-sidebar {
+    &.toggle-sidebar {
+        position: fixed;
+        top: 0;
+        left: -800px;
+        width: clamp(300px, 22.604vw, 650px);
+        height: 100vh;
+        background-color: $black;
+        z-index: 99999;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+            width: 7px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: $light-black;
+            -webkit-border-radius: 1px;
+            border-radius: 1px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            -webkit-border-radius: 1px;
+            border-radius: 1px;
+            background: $accent-1;
+        }
+
+        &.active {
+            left: 0;
+        }
+
+        .blog-sidebar {
+            background-color: $black;
+            border-radius: 0;
+            padding: 34px clamp(16px, 1.042vw, 40px);
+        }
+    }
+}
+
+.service-sidebar {
+    .service-link {
+        border: 1px solid $light-gray;
+        border-radius: $br-12;
+        background: $black;
+        transition: $transition;
+        padding: clamp(5px, 0.625vw, 24px) clamp(6px, 0.833vw, 32px);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        p {
+            color: $white;
+            transition: $transition;
+        }
+
+        svg {
+            transition: $transition;
+
+            path {
+                fill: $white;
+                transition: $transition;
+            }
+        }
+
+        &:hover {
+            border: 1px solid $accent-1;
+            background: $accent-1;
+
+            p {
+                color: $white;
+            }
+
+            svg {
+                transform: rotate(45deg);
+
+                path {
+                    fill: $white;
+                }
+            }
+        }
+    }
+
+    .content-block-1 {
+        padding: clamp(18px, 2.5vw, 68px) clamp(10px, 1.25vw, 48px);
+        border-radius: $br-12;
+        background-color: $black;
+
+        .content-user-img {
+            width: clamp(40px, 2.917vw, 128px);
+            height: clamp(40px, 2.917vw, 128px);
+        }
+    }
+
+    .content-block-2 {
+        background: url('../media/services/detail-getintouch.png') no-repeat;
+        background-position: center;
+        background-size: cover;
+        padding: clamp(48px, 3.333vw, 128px) clamp(40px, 2.5vw, 54px);
+        border-radius: $br-12;
+    }
+}
