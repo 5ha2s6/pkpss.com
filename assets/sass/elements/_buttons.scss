@@ -1,0 +1,382 @@
+/*----------------------------------------*/
+/*  Button CSS START
+/*----------------------------------------*/
+
+.cus-btn {
+  position: relative;
+  overflow: hidden;
+  color: $white;
+  display: inline-flex;
+  align-items: center;
+  gap: $gap-12;
+  justify-content: center;
+  text-transform: capitalize;
+  font-family: $font-primary;
+  color: $white;
+  font-size: clamp(12px, 0.938vw, 46px);
+  font-weight: 700;
+  font-family: $font-primary;
+  border: 1px solid $white;
+  /* 21.6px */
+  padding: clamp(10px, 0.802vw, 28px) clamp(28px, 1.734vw, 88px);
+  text-decoration: none;
+  border-radius: $br-8;
+  cursor: pointer;
+  background: transparent;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+
+  span {
+    &:first-child {
+      position: relative;
+      transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
+      z-index: 10;
+    }
+
+    &:last-child {
+      color: $white;
+      display: block;
+      position: absolute;
+      bottom: 0;
+      transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
+      z-index: 100;
+      opacity: 0;
+      top: 50%;
+      left: 50%;
+      transform: translateY(225%) translateX(-50%);
+      height: 14px;
+      line-height: 13px;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: -50%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $accent-1;
+    border: 0;
+    transform-origin: bottom center;
+    transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+    transform: skewY(9.3deg) scaleY(0);
+    z-index: 50;
+
+  }
+
+  &:hover {
+    border-radius: $br-8;
+    border: 1px solid $accent-1;
+
+    &:after {
+      transform-origin: bottom center;
+      transform: skewY(6.3deg) scaleY(2);
+    }
+
+    span {
+      &:first-child {
+        transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+        transform: translateX(-50%) translateY(-50%);
+      }
+
+      &:last-child {
+        transform: translateX(-50%) translateY(-50%);
+        opacity: 1;
+        transition: all 600ms cubic-bezier(0.48, 0, 0.12, 1);
+      }
+    }
+  }
+}
+
+.cus-btn-2 {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: $gap-12;
+  padding: clamp(10px, 0.802vw, 28px) clamp(28px, 2.089vw, 78px);
+  font-weight: 700;
+  font-family: $font-primary;
+  text-transform: none;
+  background-color: $accent-1;
+  color: $white;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: $br-8;
+
+  svg {
+    position: absolute;
+    width: clamp(16px, 1.042vw, 40px);
+    height: clamp(16px, 1.042vw, 40px);
+    z-index: 20;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .arr-1 {
+    right: 12%;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+
+    path {
+      fill: $white;
+    }
+  }
+
+  .arr-2 {
+    left: -20%;
+
+    path {
+      fill: $white;
+    }
+  }
+
+  .circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: clamp(16px, 1.042vw, 40px);
+    height: clamp(16px, 1.042vw, 40px);
+    background-color: $accent-3;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .text {
+    font-size: clamp(14px, 0.938vw, 36px);
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+    transform: translateX(-12px);
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  &:hover {
+    color: $white;
+
+    .arr-1 {
+      right: -25%;
+    }
+
+    .arr-2 {
+      transform: rotate(45deg);
+      left: 16px;
+
+      path {
+        fill: $white;
+      }
+    }
+
+    .text {
+      transform: translateX(12px);
+    }
+
+    .circle {
+      background-color: $accent-1;
+      width: 420px;
+      height: 420px;
+      opacity: 1;
+    }
+  }
+}
+
+.cus-btn-3 {
+  position: relative;
+  overflow: hidden;
+  color: $white;
+  display: inline-flex;
+  align-items: center;
+  gap: $gap-12;
+  justify-content: center;
+  text-transform: capitalize;
+  font-family: $font-primary;
+  color: $white;
+  font-size: clamp(12px, 0.938vw, 46px);
+  font-weight: 700;
+  font-family: $font-primary;
+  border: none;
+  /* 21.6px */
+  padding: clamp(10px, 0.802vw, 28px) clamp(28px, 1.734vw, 88px);
+  text-decoration: none;
+  border-radius: $br-8;
+  cursor: pointer;
+  background: $accent-1;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+
+  span {
+    &:first-child {
+      position: relative;
+      transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
+      z-index: 10;
+    }
+
+    &:last-child {
+      color: $light-black;
+      display: block;
+      position: absolute;
+      bottom: 0;
+      transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
+      z-index: 100;
+      opacity: 0;
+      top: 50%;
+      left: 50%;
+      transform: translateY(225%) translateX(-50%);
+      height: 14px;
+      line-height: 13px;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: -50%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $white;
+    border: 0;
+    transform-origin: bottom center;
+    transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+    transform: skewY(9.3deg) scaleY(0);
+    z-index: 50;
+
+  }
+
+  &:hover {
+    border-radius: $br-8;
+
+    &:after {
+      transform-origin: bottom center;
+      transform: skewY(6.3deg) scaleY(2);
+    }
+
+    span {
+      &:first-child {
+        transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+        transform: translateX(-50%) translateY(-50%);
+      }
+
+      &:last-child {
+        transform: translateX(-50%) translateY(-50%);
+        opacity: 1;
+        transition: all 600ms cubic-bezier(0.48, 0, 0.12, 1);
+      }
+    }
+  }
+}
+
+
+.showBtn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+// ===================  PAGINATIONS =================== // 
+.pagination {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+
+  #border-pagination {
+    display: flex;
+    gap: $gap-12;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+
+    li {
+      display: inline;
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: $white !important;
+        width: clamp(28px, 1.979vw, 76px);
+        height: clamp(28px, 1.979vw, 76px);
+        border: none;
+        border-radius: 6.4px;
+        transition: $transition;
+        font-size: clamp(14px, 0.938vw, 36px); //18px
+        font-weight: 500;
+        line-height: 150%;
+        background-color: transparent;
+        border: 1px solid $white;
+
+        svg {
+          width: clamp(12px, 0.833vw, 32px);
+          height: clamp(12px, 0.833vw, 32px);
+
+          path {
+            fill: $white;
+            transition: $transition;
+          }
+        }
+
+        &:hover,
+        &.active {
+          border: 1px solid $white;
+          background-color: $white;
+          color: $light-black !important;
+
+          svg {
+            path {
+              fill: $light-black;
+              transition: $transition;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// ===================  SLICK SLIDER DOTS =================== // 
+
+.slick-dots {
+  position: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: clamp(25px, 1.875vw, 54px);
+
+  li {
+    width: clamp(5px, 0.521vw, 20px);
+    height: clamp(5px, 0.521vw, 20px);
+    border-radius: $br-32;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    background: $lightest-gray;
+    transition: $transition;
+
+    &.slick-active {
+      width: clamp(48px, 3.125vw, 128px);
+      height: clamp(5px, 0.521vw, 20px);
+      border-radius: $br-24;
+      background-color: $accent-1;
+
+    }
+
+    button {
+
+      /* 18px */
+      &:before {
+        color: transparent;
+      }
+    }
+  }
+}

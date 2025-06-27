@@ -1,0 +1,163 @@
+.contact-sec {
+
+    .info-block {
+        padding: clamp(38px, 2.604vw, 128px);
+        background-color: $lightest-gray;
+        border-radius: $br-16;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: $gap-16;
+        transition: $transition;
+
+        .svg-block {
+            svg {
+                width: clamp(28px, 2.5vw, 68px);
+                height: clamp(28px, 2.5vw, 68px);
+            }
+
+            path {
+                fill: $accent-1;
+                transition: $transition;
+            }
+        }
+
+        .h6 {
+            color: $light-black;
+            transition: $transition;
+        }
+
+        &:hover {
+            background-color: $accent-1;
+
+            .svg-block {
+                path {
+                    fill: $lightest-gray;
+                }
+            }
+
+            .h6 {
+                color: $lightest-gray !important;
+            }
+        }
+    }
+
+    .info-block-2 {
+        padding: clamp(48px, 4.349vw, 148px) clamp(40px, 2.5vw, 54px);
+        border-radius: $br-16;
+        background-color: $lightest-gray;
+        display: flex;
+        align-items: center;
+        gap: clamp(38px, 2.917vw, 128px);
+        flex-wrap: wrap;
+        row-gap: clamp(38px, 2.917vw, 128px);
+
+        .icon {
+            width: clamp(38px, 3.75vw, 128px);
+            height: clamp(38px, 3.75vw, 128px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+            border-radius: 50%;
+            background-color: $accent-1;
+
+            svg {
+                width: clamp(21px, 1.875vw, 76px);
+                height: clamp(21px, 1.875vw, 76px);
+            }
+        }
+    }
+
+    .map {
+        .map-wrapper {
+            iframe {
+                border-radius: $br-16;
+                width: 100%;
+                height: clamp(350px, 28.594vw, 900px);
+            }
+        }
+
+    }
+
+    .img-block {
+        width: 100%;
+        position: relative;
+        border-radius: $br-24;
+        overflow: hidden;
+
+        img {
+            border-radius: $br-24;
+            width: 100%;
+            transition: $transition;
+            object-fit: cover;
+        }
+
+        .img-content {
+            position: absolute;
+            padding: 0 clamp(20px, 2.5vw, 54px);
+            bottom: clamp(40px, 2.5vw, 54px);
+
+            .telicon {
+                width: clamp(34px, 2.808vw, 84px);
+                height: clamp(34px, 2.808vw, 84px);
+                border-radius: 50%;
+                background-color: $accent-1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-shrink: 0;
+
+                img {
+                    width: clamp(18px, 1.25vw, 48px);
+                    height: clamp(18px, 1.25vw, 48px);
+                    flex-shrink: 0;
+                }
+            }
+        }
+
+        &:hover {
+            img {
+                transform: scale(1.03);
+            }
+        }
+    }
+
+    .contact-content {
+        border-radius: $br-24;
+        background-color: $black;
+        padding: clamp(24px, 1.667vw, 64px);
+    }
+
+    .contact-info-block {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .info-icon {
+            transition: $transition;
+            width: clamp(40px, 2.5vw, 54px);
+            height: clamp(40px, 2.5vw, 54px);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: $accent-1;
+
+            svg {
+                width: clamp(14px, 1.458vw, 48px);
+                height: clamp(14px, 1.458vw, 48px);
+            }
+        }
+
+        &:hover {
+            .info-icon {
+                background-color: $white;
+            }
+        }
+    }
+}

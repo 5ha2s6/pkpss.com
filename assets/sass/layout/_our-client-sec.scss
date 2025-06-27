@@ -1,0 +1,46 @@
+.happy-client-sec {
+    .client-slider {
+        position: relative;
+
+        .slick-list {
+            height: clamp(308px, 31.25vw, 999px) !important;
+            padding: clamp(60px, 7.292vw, 348px) 0px !important;
+
+            @include media-query(720px) {
+                height: 260px !important;
+                padding: 18px !important;
+            }
+        }
+
+        .slide-1 {
+            display: flex;
+            flex-direction: column;
+            gap: $gap-32;
+            border-radius: $br-12;
+            background-color: $black;
+            padding: clamp(10px, 1.25vw, 48px);
+            margin: clamp(8px, 0.938vw, 36px) 0;
+
+            i {
+                font-size: clamp(10px, 1.25vw, 48px);
+                color: #EBD40A;
+            }
+        }
+    }
+}
+
+.banner-sec {
+    .banner-wrapper {
+        background-color: $black;
+        border-radius: $br-24;
+        overflow: hidden;
+
+        .banner-content {
+            padding-left: clamp(38px, 3.333vw, 128px);
+
+            @include media-query(821px) {
+                padding: clamp(24px, 1.667vw, 64px);
+            }
+        }
+    }
+}

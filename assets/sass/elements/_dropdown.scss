@@ -1,0 +1,111 @@
+.wrapper-dropdown {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: $gap-8;
+    position: relative;
+    width: fit-content;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    .selected-display {
+        color: $light-gray !important;
+        font-weight: 400;
+        line-height: 150%;
+    }
+
+    &::before {
+        position: absolute;
+        top: 50%;
+        right: 16px;
+        margin-top: -2px;
+        border-width: 6px 6px 0 6px;
+        border-style: solid;
+        border-color: $light-gray transparent;
+    }
+
+    .topbar-dropdown {
+        width: 100%;
+        overflow: hidden;
+        box-shadow: 0px 3px 6px 0px $light-black;
+        background: $black;
+        color: $white !important;
+        box-shadow: 0px 10px 60px 0px rgba(255, 255, 255, 0.07);
+        transition: 0.3s;
+        position: absolute;
+        top: 110%;
+        right: 0;
+        left: 0px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        z-index: 99;
+        border-radius: 8px;
+        -webkit-transform-origin: top;
+        -moz-transform-origin: top;
+        -ms-transform-origin: top;
+        transform-origin: top;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        opacity: 0;
+        visibility: hidden;
+
+
+        li {
+            color: $white !important;
+            font-weight: 500;
+            text-transform: capitalize;
+            padding: 0 12px;
+            line-height: 40px;
+            border-radius: 0;
+            overflow: hidden;
+            transition: $transition;
+
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            &:hover {
+                transition: $transition;
+                background-color: $accent-1;
+                color: $white !important;
+            }
+        }
+    }
+
+    &.active {
+        .topbar-dropdown {
+            color: $white;
+            opacity: 1;
+            visibility: visible;
+            border-radius: 5px;
+        }
+    }
+
+    .scrollable-menu {
+        height: auto;
+        max-height: 200px;
+        overflow-x: hidden;
+    }
+
+    .arrow {
+        float: right;
+        rotate: 180deg;
+    }
+
+    svg {
+        transition: all 0.3s;
+    }
+
+    .rotated {
+        transform: rotate(-180deg);
+    }
+}

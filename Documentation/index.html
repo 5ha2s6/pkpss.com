@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>HTML Templates Documentation</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+
+    <!-- ========== Bootstrao Stylesheet ========== -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- ========== Google Fonts ========== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- ========== Start Stylesheet ========== -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/responsive.css" rel="stylesheet" />
+
+
+</head>
+
+<body class="x-hidden">
+    <section class="de-padding" id="start">
+        <div class="text-center">
+            <h1 class="text-white">Bootstrap HTML Templates Documentation</h1>
+        </div>
+    </section>
+    <section id="intro" class="de-padding-bottom container">
+        <div class="item">
+
+            <div class="heading">
+                <h1>Prepration</h1>
+            </div>
+            <p>Before you proceed with HTML Template installation, you need to prepare. It is recommended to follow steps, listed below:</p>
+        </div>
+    </section>
+
+    <section id="installation" class="de-padding-bottom container">
+        <div class="item">
+            <div class="heading">
+                <h1>Software</h1>
+            </div>
+            <p>We recommend that you download all the required software to edit Website Template. Software Required is listed at template preview page.</p>
+            <p>Technical requirements might differ depending on exact template, therefore we will list the most basic ones:</p>
+            <ol class="index-list">
+                <li>First, you'll need proper unzipping software for password-protected sources_#########.zip package extracting. You
+                    may use WinZip 9+ (Windows) and Stuffit Expander 10+ (Mac). This is a mandatory software.
+                </li>
+                <li>You should also use code editor, i. e. Sublime Text, Notepad++, Atom, etc. for template files source code
+                    editing.
+                </li>
+                <li>For files uploading to server FTP manager will be also required, like FileManager at your hosting control panel or
+                    desktop applications, such as Total Commander, FileZilla, CuteFTP, etc.
+                </li>
+                <li>
+                  We highly recommend you to use LibSass for SCSS compilation, ex. program Prepros.
+                </li>
+            </ol>
+        </div>
+    </section>
+    <section id="software" class="de-padding-bottom container">
+        <div class="item">
+            <div class="heading">
+                <h1>Hosting</h1>
+            </div>
+            <p>You can just run index.html file directly from your site folder, but it won't let you explore all template functionality. You should upload template to hosting server in order to display a fully working website correctly.</p>
+            <p>In case you have existing server already, please check if it meets Website Template requirements, listed at template preview page. For most templates PHP 5.2+ version is the only requirement.</p>
+            <p>You may also install Website Template to your computer locally by using localhost. In order to set up local server you may use WAMP, AppServ, MAMP or any similar software. All of them are installed same as regular application.</p>
+            <br>
+            <p>Feel free to check the following tutorials on how to set up local server:</p>
+            <ul class="marked-list">
+                <li><a href="/help/how-to-install-appserv-web-development-environment.html">How to install AppServ web development environment</a></li>
+                <li><a href="/help/how-to-install-wamp-web-development-environment.html">How to install WAMP web development environment</a></li>
+                <li><a href="/help/how-to-install-xamp-web-development-environment.html">How to install XAMP web development environment</a></li>
+            </ul>
+        </div>
+    </section>
+    <section id="upload" class="de-padding-bottom container">
+        <div class="item">
+            <div class="heading">
+                <h1>Template upload</h1>
+            </div>
+            <p>You need to upload all files of site/ folder from your localhost to hosting.</p>
+           <p><b>Note:</b> the root directory of a site depends on the internal structure of your hosting server. If you upload the site folder itself on hosting, the root of your site will be http://your_domain_name/site. You need to upload inner content of site/ folder if you want url to be http://your_domain_name/</p>
+        </div>
+    </section>
+
+    <section id="inc-files" class="de-padding-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="item">
+                        <div class="heading">
+                            <h1>Folder Structure</h1>
+                            <h4>Checkout the files that you'll see upon downloading</h4>
+                        </div>
+                        <p>
+                            After HTML Website Template package extracting you'll see the following files structure:
+                        </p>
+
+                        <ol>
+                            <li>
+                                <code>html/</code> - Includes all the html files
+                                <ul>
+                                    <li>#####.html</li>
+                                    <li>#####.html</li>
+                                    <li>#####.html</li>
+                                </ul>
+                            </li>
+                            <li><code>html/assets/css</code> - Stylesheet files
+                                <ul>
+                                    <li><strong>app.css</strong> (Main Compiled CSS)</li>
+                                    <li>
+                                        <strong>vendor</strong> - Includes all the external plugins files
+                                    </li>
+                                    <li><strong>fonts</strong> – Icon font files</li>
+                                    <li>
+                                        <strong>elements</strong>
+                                        <ul>
+                                            <li>preloader.css</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <code>html/assets/scss</code> - SASS files
+                                <ul>
+                                    <li><strong>app.scss</strong> (Main SCSS)</li>
+                                    <li>
+                                        <strong>Basic</strong>
+                                        <p>Including styling for general elements of html</p>
+                                    </li>
+                                    <li>
+                                        <strong>Elements</strong>
+                                        <p>Including styling for elements like button. heading and preloader</p>
+                                    </li>
+                                    <li>
+                                        <strong>Helpers</strong>
+                                        <p>This folder contains styling for animation, responsive queries and spacing
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <strong>Layouts</strong>
+                                        <p>This folder contains styling for header and footer</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><code>html/assets/media</code> - Contains the placeholder images that can be replaced
+                                with your own</li>
+                            <li><code>html/assets/js</code> - Javacript files
+                                <ul>
+                                    <li><strong>app.js</strong> (Main Template Js)</li>
+                                    <li>
+                                        <strong>vendor</strong>
+                                        <p>This folder contains all the js plugin included</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><code>html/assets/mail</code> - Contact form
+                                <ul>
+                                    <li><strong>contact.php</strong> (Mail Sent Script)</li>
+                                </ul>
+                            </li>
+
+
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="html" class="de-padding-bottom container">
+        <div class="item">
+            <div class="heading">
+                <h1>HTML Structure</h1>
+                <h5> HTML Website Template .html pages structure is built on the following principle:
+                </h5>
+            </div>
+            <pre class="line-numbers"><code class="language-markup">
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+  &lt;!-- Your Stylesheets, Core Scripts (jQuery etc) & Title -- &lt;
+   ...
+  &lt;/head&gt;
+  &lt;body&gt;
+
+    &lt;!--  Preloader --&gt;
+    &lt;div&gt; &lt;/div&gt;
+
+    &lt;!-- Main Wrapper Start --&gt;
+    &lt;div&gt;
+
+        &lt;!-- Start Header --&gt;
+        &lt;header&gt;
+
+        &lt;/header&gt;
+        &lt;!-- End Header--&gt;
+
+        &lt;!-- Page Sections --&gt;
+        &lt;section&gt; 
+        &lt;/section&gt;
+        &lt;!-- End Page Sections --&gt;
+
+        &lt;!-- Star Footer --&gt;
+        &lt;footer&gt;
+        &lt;/footer&gt;
+        &lt;!-- End Footer --&gt;
+
+    &lt;/div&gt;
+    &lt;!-- Main Wrapper End --&gt;
+
+    &lt;!-- Jquery Js --&gt;
+    &lt;script src=&quot;assets/js/vendor/jquery-3.6.3.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;assets/js/vendor/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+            
+    &lt;!-- Includes plugins JS files will be here --&gt;
+
+    &lt;!-- Site Scripts --&gt;
+    &lt;script src="assets/js/app.js">&lt;/script&gt;
+
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+        </div>
+    </section>
+
+    <section id="customization" class="de-padding-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="item">
+                        <div class="heading">
+                            <h1>Customization</h1>
+                            <p>HTML templates are fully customizable, allowing you to tailor the design to your
+                                needs. Here are some tips to help you get started:</p>
+                        </div>
+                        <h5>1. Install Sass:</h5>
+                        <p>1. Templates are built with sass you will need to install <b>SASS</b> on your machine follow
+                            instruction from this link:</p>
+                        <p><a href="https://sass-lang.com/install" target="_blank">https://sass-lang.com/install</a></p>
+                        <h5>2. Run Watch Command to complile:</h5>
+                        <p class="mb-1">After the successfull instaltion you will need to run following command using
+                            CMD prompet on main containing folder 'html':</p>
+                        <b>sass --watch assets/sass:assets/css</b>
+                        <h4>After these two steps now you are good to go for style changing!</h4>
+                        <br>
+                        <h4 class="highlight-title">Here are general changing details with screenshots to help you go
+                            through!</h4>
+                        <h2 class="mb-1">How to change Font:</h2>
+                        <p>Got to 'html/assets/sass/app.scss' file and change the following line:</p>
+                        <img src="assets/img/font.PNG" alt="Thumb">
+                        <hr>
+
+                        <h2 class="mb-1">How to change favicon</h2>
+                        <p>You will find this line in head of all html files. Favicon image available in
+                            'html/assets/media'</p>
+                        <img src="assets/img/change-favicon.PNG" alt="Thumb">
+
+                        <hr>
+
+                        <h2 class="mb-1">How to change logo</h2>
+                        <p>Header logo for the desktop version of the site should be changed in Page Head section of the target page with the .navbar-brand class. Find Logo image available in 'html/assets/media'
+                        </p>
+                        <img src="assets/img/change-logo.PNG" alt="Thumb">
+
+                        <hr>
+
+                        <h2>How to change page title</h2>
+                        <p>You will find this line in head of all html files. Favicon image available in
+                            'html/assets/media'</p>
+                        <img src="assets/img/page-title.PNG" alt="Thumb">
+                        <hr>
+                      
+                        <h2 class="mb-1">How to control Slick Slider</h2>
+                        <p>Navigate to 'html/assets/js/app.js' you will find this.</p>
+                        <img src="assets/img/slick-slider.PNG" alt="Thumb">
+
+                        <hr>
+
+                        <h2 class="mb-1">How to Add/Remove CSS</h2>
+                        <p>Add or remove css from head tag of every html page</p>
+                        <img src="assets/img/change-css.PNG" alt="Thumb">
+
+                        <hr>
+
+                        <h2 class="mb-1">How to Add/Remove JS</h2>
+                        <p>Add or remove js near to body end tag of every html page</p>
+                        <img src="assets/img/change-js.PNG" alt="Thumb">
+
+                        <hr>
+
+                        <h2 class="mb-1">How to change contact form email</h2>
+                        <p>Navigate to 'html/assets/mail/contact.php' file</p>
+                        <img src="assets/img/change-email.PNG" alt="Thumb">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="attention" class="de-padding-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="item">
+                        <div class="heading">
+                            <h1>Support</h1>
+                            <h4>We are here for you</h4>
+                        </div>
+                        <a>If you encounter any issues with the template or have any questions, please don't hesitate to
+                            contact us.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="credit" class="de-padding-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="item">
+                        <div class="heading">
+                            <h1>Credits</h1>
+                            <p>
+                                We would like to take a moment to express our gratitude to those who have contributed to
+                                the development of this theme, making it a truly exceptional product for our valued
+                                users. We extend our heartfelt thanks to:
+                            </p>
+                        </div>
+                        <h4>Images and video</h4>
+                        <ul>
+                            <li><a href="https://www.freepik.com/" target="_blank">Freepick</a></li>
+                            <li><a href="https://unsplash.com/" target="_blank">Unsplash</a></li>
+                            <li><a href="https://pixabay.com/" target="_blank">Pixaby</a></li>
+                            <li><a href="https://www.pexels.com/" target="_blank">Pexels</a></li>
+                        </ul>
+                        <h4>JS Libraries</h4>
+                        <ul>
+                            <li><a href="https://jquery.com/download/" target="_blank">Jquery</a></li>
+                            <li><a href="https://mciastek.github.io/sal/" target="_blank">Sal Scroll</a></li>
+                            <li><a href="https://kenwheeler.github.io/slick/" target="_blank">Slick Slider</a></li>
+                            <li><a href="https://greensock.com" target="_blank">GreeLock</a></li>
+                            <li><a href="https://manos.malihu.gr/jquery-custom-content-scroller/" target="_blank">Custom
+                                    Scroll</a></li>
+                            <li><a href="https://hilios.github.io/jQuery.countdown/" target="_blank">Jquery
+                                    Countdown</a></li>
+                        </ul>
+                        <h4>CSS & Fonts</h4>
+                        <ul>
+                            <li><a href="http://getbootstrap.com/" target="_blank">Bootstrap</a></li>
+                            <li><a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">Font-Awesome (Font
+                                    Icons)</a></li>
+                            <li><a href="https://www.google.com/fonts" target="_blank">Google Fonts</a></li>
+                            <li><a href="https://kenwheeler.github.io/slick/" target="_blank">Slick Slider</a></li>
+                            <li><a href="https://manos.malihu.gr/jquery-custom-content-scroller/" target="_blank">Custom
+                                    Scroll</a></li>
+                            <li><a href="https://mciastek.github.io/sal/" target="_blank">Sal Scroll</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="conclusion" class="de-padding-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="item">
+                        <div class="heading">
+                            <h1>Conclusion</h1>
+                        </div>
+                        <a>We hope this documentation has helped you set up and customize your new website with ease.
+                            Thank you for choosing UI Paradox for HTML5 template and we wish you all the best with your online
+                            presence.</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- jQuery Frameworks
+    ============================================= -->
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+</body>
+
+</html>
