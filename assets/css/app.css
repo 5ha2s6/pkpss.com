@@ -1782,9 +1782,10 @@ label.error {
 #preloader {
   position: fixed;
   width: 100%;
-  height: 100vh;
+  height:120%;
   text-align: center;
   background-color: #ededed;
+  margin-top: -7.5vh;
   z-index: 9999999;
   display: grid;
   align-content: center;
@@ -1792,6 +1793,7 @@ label.error {
   transition: all 500ms linear;
   /* common */
 }
+
 #preloader .loading {
   font-size: 89px;
   font-family: "Work Sans", sans-serif;
@@ -2709,11 +2711,11 @@ header .cus-btn-2:hover .circle {
 }
 
 .hero-sec {
-  background: url("../media/newnewbg.jpg") no-repeat;
+  background: url("../media/newbgpkppic2.jpg") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
-  margin-top: 7.5%;
+  /* margin-top: 7.5%; */
   height: clamp(550px, 51.146vw, 1604px);
   /* height: 500px; */
   position: relative;
